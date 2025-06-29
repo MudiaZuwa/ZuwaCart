@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="google-site-verification"
+      content="tmBNvQn8Ro_nv_H4Dt9d5JM5DgXnapuLLN6fr2lUYAI"
+    />
+    <link rel="icon" href="../../images/cart.png" sizes="16×16" />
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000137" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Admin User's Orders</title>
+
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="../../css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <base href="./" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar for large screens -->
+        <div
+          class="col-lg-2 d-none d-lg-block vh-100 shadow position-fixed"
+          id="sidebar"
+        >
+          <div class="p-4 h-100 d-flex flex-column">
+            <h4 class="text-white mb-4">Menu</h4>
+            <ul class="nav flex-column gap-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="material-symbols-outlined">dashboard</span>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <span class="material-symbols-outlined">receipt_long</span>
+                  Orders
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="material-symbols-outlined">store</span>
+                  Vendors
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="material-symbols-outlined">settings</span>
+                  Settings
+                </a>
+              </li>
+            </ul>
+            <div class="mt-auto pt-4 text-white small">
+              <p class="mb-0">Admin Panel</p>
+            </div>
+          </div>
+        </div>
+        <!-- Main content area -->
+        <div class="col-lg-10 offset-lg-2 px-0">
+          <!-- Offcanvas Sidebar (small screens) -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasMenu"
+          >
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+              <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    Orders
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="material-symbols-outlined">store</span>
+                    Vendors
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    Settings
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg navbar-light" id="div1">
+            <div class="container-fluid flex-nowrap">
+              <button
+                class="btn btn-primary me-2 d-lg-none"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu"
+              >
+                ☰
+              </button>
+              <form class="d-flex w-100" id="form">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Enter Order or User ID (Case Sensitive)"
+                  id="div2"
+                />
+              </form>
+            </div>
+          </nav>
+
+          <!-- Body Content -->
+          <div id="body" style="display: none">
+            <!-- Filter Header -->
+            <div class="bg-light text-dark w-100 shadow-lg">
+              <div class="d-flex justify-content-end container py-2">
+                <div
+                  data-bs-toggle="modal"
+                  data-bs-target="#filterModal"
+                  class="d-flex align-items-center"
+                  style="cursor: pointer"
+                >
+                  <span class="material-symbols-outlined my-1 fs-5 px-1"
+                    >filter_list</span
+                  >
+                  <p class="my-1 fs-5">Filter</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order List -->
+            <div class="container" id="listBody">
+              <div id="list" class="row"></div>
+            </div>
+
+            <!-- No Items Message -->
+            <div id="no_items">
+              <div style="width: 236px; height: 250px; margin: auto">
+                <p style="font-size: 18px; text-align: center">No User Order</p>
+                <img
+                  src="../../images/PngItem_212128 (2).png"
+                  style="
+                    height: 120px;
+                    width: 150px;
+                    filter: invert(6%) sepia(63%) saturate(3693%)
+                      hue-rotate(232deg) brightness(91%) contrast(117%);
+                    margin-bottom: 8px;
+                    object-fit: scale-down;
+                    margin-left: 43px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter Modal -->
+          <div
+            class="modal fade"
+            id="filterModal"
+            tabindex="-1"
+            aria-labelledby="filterModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="filterModalLabel">Filter</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Status Filter -->
+                  <div class="mb-4">
+                    <h6>Status</h6>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="pending"
+                        id="statusPending"
+                      /><label class="form-check-label" for="statusPending"
+                        >Confirming Request</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="confirmed"
+                        id="statusConfirmed"
+                      /><label class="form-check-label" for="statusConfirmed"
+                        >Request confirmed</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="shipped"
+                        id="statusShipped"
+                      /><label class="form-check-label" for="statusShipped"
+                        >Shipped</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="delivered"
+                        id="statusDelivered"
+                      /><label class="form-check-label" for="statusDelivered"
+                        >Delivered</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Date Range Filter -->
+                  <div class="mb-3">
+                    <h6>Date Range</h6>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="startDate" class="form-label"
+                          >Start Date</label
+                        >
+                        <input
+                          type="date"
+                          class="form-control"
+                          id="startDate"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label for="endDate" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="endDate" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="applyFilters"
+                  >
+                    Apply Filters
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loader -->
+          <div id="loader"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">My Shop</title>
+    <link rel="icon" href="/images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2" >
+        <span >Ordered Items</span>
+      </div>
+    </div>
+    <div id="body">
+      <div class="container">
+        <div class="row" id="products"></div>
+      </div>
+
+      <div id="info">
+        <div style="display: flex; background-color: white; padding: 8px">
+          <p style="font-size: 16px; width: 50%; margin: 0px">Total</p>
+          <p
+            id="total"
+            style="
+              font-size: 16px;
+              color: #000137;
+              width: 50%;
+              text-align: right;
+              margin: 0px;
+            "
+          >
+            N100000
+          </p>
+        </div>
+        <div style="display: flex; background-color: white; padding: 8px">
+          <p style="font-size: 16px; width: 50%">Status</p>
+          <p
+            id="status"
+            style="
+              font-size: 16px;
+              color: #000137;
+              width: 50%;
+              text-align: right;
+            "
+          >
+            N100000
+          </p>
+        </div>
+
+        <button id="continue">Comfirm Order</button>
+      </div>
+    </div>
+
+    <div id="loader"></div>
+    <script src="/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

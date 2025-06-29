@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Address Book</title>
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address Book</title>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2">
+        <span>Address Book</span>
+      </div>
+    </div>
+    <div id="body" class="container"></div>
+    <div id="loader" class="loader"></div>
+    <div>
+      <p href="../Create-Address/" class="material-icons" id="floating-btn">
+        add
+      </p>
+    </div>
+
+    <div class="floating-body" id="edit-body">
+      <form id="edit-form" class="floating-form">
+        <button
+          id="close"
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+        ></button>
+        <h2 id="formTitle">Register New Address</h2>
+        <div class="input-group flex-nowrap">
+          <input
+            required
+            type="text"
+            placeholder="First Name"
+            id="edit-first"
+          />
+          <input required type="text" placeholder="Last Name" id="edit-last" />
+        </div>
+        <div class="input-group flex-nowrap gap-0">
+          <span class="phone-prefix">+234</span>
+          <input
+            required
+            class="boxes"
+            type="tel"
+            placeholder="Phone Number"
+            id="edit-phone"
+          />
+        </div>
+        <div class="input-group flex-nowrap">
+          <select required id="edit-gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <select required class="form-select" id="edit-location">
+            <option value="General Location" disabled selected>
+              General Location
+            </option>
+            <!-- <option value="None">None</option> -->
+            <option value="Hall 1">Hall 1</option>
+            <option value="Hall 2">Hall 2</option>
+            <option value="Hall 3">Hall 3</option>
+            <option value="Hall 4">Hall 4</option>
+            <option value="Hall 5">Hall 5</option>
+            <option value="Hall 6">Hall 6</option>
+            <option value="Hall 7">Hall 7</option>
+            <option value="NDDC Medical Hostel">NDDC Medical Hostel</option>
+            <option value="KeyStone Hostel">KeyStone Hostel</option>
+            <option value="Clinical Hostel">Clinical Hostel</option>
+            <option value="Intercontinental Hostel">
+              Intercontinental Hostel
+            </option>
+            <option value="Festus Akingbola">Festus Akingbola</option>
+            <option value="Tetfund Hostel A">Tetfund Hostel A</option>
+            <option value="Tetfund Hostel B">Tetfund Hostel B</option>
+            <option value="Tetfund Hostel C">Tetfund Hostel C</option>
+            <option value="Tetfund Hostel D">Tetfund Hostel D</option>
+            <option value="Sen. Danjuma">Sen. Danjuma</option>
+            <option value="Sen. Danjuma Legacy">Sen. Danjuma Legacy</option>
+            <option value="NNPC Hostel">NNPC Hostel</option>
+            <option value="June 12">June 12</option>
+            <option value="Ekosodin-Newton">Ekosodin-Newton</option>
+            <option value="Ekosodin-Edo">Ekosodin-Edo</option>
+            <option value="Ekosodin-JB">Ekosodin-JB</option>
+            <option value="Ekosodin-Market">Ekosodin-Market</option>
+          </select>
+        </div>
+        <input
+          
+          class="boxes"
+          type="text"
+          placeholder="Address"
+          id="edit-address"
+        />
+        <button id="edit-submit" type="submit">Done</button>
+        <div class="loader-container">
+          <div id="edit-loader" class="loader"></div>
+        </div>
+      </form>
+    </div>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

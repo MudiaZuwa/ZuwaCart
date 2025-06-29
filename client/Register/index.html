@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register</title>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2" style="color: #000137; vertical-align: middle">
+        <span style="color: white; vertical-align: middle"> Sign up</span>
+      </div>
+    </div>
+
+<div id="form" class="container shadow-lg rounded-3 bg-white pb-2" style="max-width: 400px; margin-top: 70px;">
+  <form id="boxes">
+    <div class="row g-2 mb-3">
+      <div class="col">
+        <input required type="text" class="form-control" placeholder="First Name" id="first" />
+      </div>
+      <div class="col">
+        <input required type="text" class="form-control" placeholder="Last Name" id="last" />
+      </div>
+    </div>
+    
+    <input required type="email" class="form-control mb-3" placeholder="Email Address" id="email" />
+    
+    <div class="input-group mb-3">
+      <input required type="password" class="form-control" placeholder="Password" id="password" />
+      <button class="btn btn-outline-secondary" type="button" id="toggle">
+        <img src="../images/ic_visibility_off_black.png" id="toggleImg" alt="Toggle Visibility" style="width: 20px; height: 20px;" />
+      </button>
+    </div>
+    
+    <input required type="password" class="form-control mb-3" placeholder="Re-enter Password" id="re-password" />
+    
+    <div class="input-group mb-3">
+      <span class="input-group-text">+234</span>
+      <input required type="tel" class="form-control" placeholder="Phone Number" id="phone" />
+    </div>
+    
+    <div class="row g-2 mb-3">
+      <div class="col">
+        <select required class="form-select" id="gender">
+          <option value="Gender" disabled selected>Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="col">
+        <select required class="form-select" id="hostel">
+          <option value="Hostel" disabled selected>Hostel</option>
+          <option value="Hall1">Hall1</option>
+          <option value="Hall2">Hall2</option>
+          <option value="Hall3">Hall3</option>
+          <option value="Hall4">Hall4</option>
+          <option value="Hall5">Hall5</option>
+          <option value="Hall6">Hall6</option>
+          <option value="Hall7">Hall7</option>
+          <option value="NDDC">NDDC</option>
+          <option value="KeyStone">KeyStone</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="text-end">
+      <a href="../Login/" class="text-decoration-none text-primary">Login</a>
+    </div>
+    
+    <button id="submit" type="submit" class="btn btn-primary w-100 mt-3 shadow-sm" style="background-color: #000137; border: none;">Done</button>
+    
+    <div id="loader" class="spinner-border text-primary d-none mt-3" role="status" style="width: 28px; height: 28px; border-width: 5px;"></div>
+  </form>
+</div>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

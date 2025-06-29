@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="google-site-verification"
+      content="tmBNvQn8Ro_nv_H4Dt9d5JM5DgXnapuLLN6fr2lUYAI"
+    />
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000137" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">Search</title>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="div1" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid flex-nowrap">
+        <div>
+          <div class="navbar-nav flex-row">
+            <a class="nav-link px-md-2 px-1" href="#">
+              <span class="d-none d-md-block">Home</span>
+              <img class="d-md-none" src="images/home-icon.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <form class="d-flex vw-md-25" id="form">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search..."
+              id="div2"
+              list="history"
+            />
+            <datalist id="history"></datalist>
+          </form>
+          <a class="nav-link px-md-2 px-1" href="../My-Cart/">
+            <div class="notification">
+              <span class="d-none d-md-block">Cart</span>
+              <span class="material-symbols-outlined d-md-none">
+                shopping_cart
+              </span>
+              <span id="cart_num2" class="a_badge">0</span>
+            </div>
+          </a>
+
+          <!-- <a class="nav-link px-md-2 px-1" href="./Liked-Items/">
+            <span class="d-none d-md-block">Liked Items</span>
+            <span class="material-symbols-outlined d-md-none"> favorite </span>
+          </a> -->
+
+          <a class="nav-link px-md-2 px-1" href="../My-Orders/">
+            <span class="d-none d-md-block">Your Orders</span>
+            <span class="material-symbols-outlined d-md-none"> orders </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div id="body" style="display: none">
+      <div class="container" id="listBody">
+        <div
+          id="list"
+          class="row d-flex align-items-center justify-content-start w-auto"
+        ></div>
+      </div>
+      <div id="no_items">
+        <div style="width: 236px; height: 250px; margin: auto">
+          <p style="font-size: 18px; text-align: center">
+            No Item Found with that SearchQuery
+          </p>
+          <img
+            src="../images/PngItem_212128 (2).png"
+            style="
+              height: 120px;
+              width: 150px;
+              filter: invert(6%) sepia(63%) saturate(3693%) hue-rotate(232deg)
+                brightness(91%) contrast(117%);
+              margin-bottom: 8px;
+              object-fit: scale-down;
+              margin-left: 43px;
+            "
+          />
+          <a href="../" class="continue"
+            ><button id="continue">Continue Shopping</button></a
+          >
+        </div>
+      </div>
+      <nav
+        aria-label="Page navigation example"
+        class="w-100 b-light justify-content-center mt-3"
+        id="paginationBody"
+      >
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div id="rec">
+        <div
+          style="
+            margin-top: 8px;
+            width: 100%;
+            background-color: white;
+            padding: 8px;
+          "
+        >
+          <div style="color: #000137; font-size: 14px; padding: 8px">
+            Recently Viewed items
+          </div>
+        </div>
+        <div
+          id="recent"
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <div id="loader"></div>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

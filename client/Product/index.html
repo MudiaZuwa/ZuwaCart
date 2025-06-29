@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Product</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#000137" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="div1" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid flex-nowrap">
+        <div>
+          <div class="navbar-nav flex-row">
+            <a class="nav-link px-md-2 px-1" href="#">
+              <span class="d-none d-md-block">Home</span>
+              <img class="d-md-none" src="images/home-icon.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <a class="nav-link px-md-2 px-1" href="../My-Cart/">
+            <div class="notification">
+              <span class="d-none d-md-block">Cart</span>
+              <span class="material-symbols-outlined d-md-none">
+                shopping_cart
+              </span>
+              <span id="cart_num" class="a_badge">0</span>
+            </div>
+          </a>
+
+          <a class="nav-link px-md-2 px-1" href="../Liked-Items/">
+            <span class="d-none d-md-block">Liked Items</span>
+            <span class="material-symbols-outlined d-md-none"> favorite </span>
+          </a>
+
+          <a class="nav-link px-md-2 px-1" href="../My-Orders/">
+            <span class="d-none d-md-block">Your Orders</span>
+            <span class="material-symbols-outlined d-md-none"> orders </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="body">
+      <div id="top">
+        <div
+          id="carouselExampleControlsNoTouching"
+          class="carousel slide"
+          data-bs-interval="false"
+        >
+          <div class="carousel-inner" id="slidercontainer">
+            <div class="carousel-item active">
+              <div class="img_container">
+                <img
+                  id="1"
+                  src=""
+                  class="d-block w-100 item_images"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div id="item_info">
+          <div style="display: flex">
+            <p id="item_price">N90000</p>
+            <img src="../images/heart-regular-24.png" id="save" alt="" />
+          </div>
+          <p id="item_name">Product Name</p>
+          <p id="deliveryText"  >
+            Estimated delivery: <span id="deliveryEstimate">2-5</span> business
+            days after order confirmation.
+          </p>
+        </div>
+        <div id="des">
+          <div class="div2">
+            <div style="font-size: 16px; color: #000137; font-weight: bold">
+              Item Description
+            </div>
+          </div>
+          <a href="../Product-Description/" id="des_img" class="rightArrowImg">
+            <i class="bx bx-chevron-right"></i
+          ></a>
+        </div>
+        <div id="desc">
+          <p id="item_description" style="overflow: hidden">Description</p>
+        </div>
+      </div>
+
+      <div id="vendor_details" style="width: 100%; margin: 0; margin-top: 10px">
+        <div style="width: 100%; background-color: white; padding: 8px">
+          <div class="d-flex">
+            <div class="d-flex align-items-center w-100">
+              <img src="../images/PngItem_248631.png" id="vendorIcon" />
+              <div id="vendorName"></div>
+            </div>
+            <a
+              href="../Product-Description/"
+              id="vendorStoreImg"
+              class="rightArrowImg"
+            >
+              <i class="bx bx-chevron-right"></i
+            ></a>
+          </div>
+          <p style="font-size: 14px" id="vendorProdHead">
+            Other Products from Vendor:
+          </p>
+        </div>
+
+        <div
+          id="vendorItems"
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+          "
+        ></div>
+      </div>
+      <div
+        style="width: 100%; margin: 0; margin-top: 10px"
+        id="recommendedBody"
+      >
+        <div style="width: 100%; background-color: white; padding: 8px">
+          <div style="color: #000137; font-size: 14px; padding: 8px">
+            Recommended for you
+          </div>
+        </div>
+        <div class="container" id="menu">
+          <div class="row" id="recommended"></div>
+        </div>
+      </div>
+
+      <nav id="cart_nav">
+        <div id="minus-box" class="nav_box">-</div>
+        <div id="add-box" class="nav_box">Add to cart</div>
+        <div id="plus-box" class="nav_box">+</div>
+      </nav>
+    </div>
+    <div id="loader"></div>
+    <div id="no_items">
+      <div style="width: 236px; height: 220px; margin: auto">
+        <p style="font-size: 18px; text-align: center">Item is Not Available</p>
+        <img
+          src="../images/PngItem_212128 (2).png"
+          style="
+            height: 120px;
+            width: 150px;
+            filter: invert(6%) sepia(63%) saturate(3693%) hue-rotate(232deg)
+              brightness(91%) contrast(117%);
+            margin-bottom: 8px;
+            object-fit: scale-down;
+            margin-left: 43px;
+          "
+        />
+        <a href="../" class="continue"
+          ><button id="continue">Continue Shopping</button></a
+        >
+      </div>
+    </div>
+    <div id="rec" style="display: none; margin-top: 10px">
+      <div style="width: 100%; background-color: white; padding: 8px">
+        <div style="color: #000137; font-size: 14px; padding: 8px">
+          Recently Viewed items
+        </div>
+      </div>
+      <div
+        id="recent"
+        style="
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+        "
+      ></div>
+    </div>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module" src="main.js"></script>
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#000137" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Order</title>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2">
+        <span>Complete Order</span>
+      </div>
+    </div>
+
+    <div id="body" class="completeOrder">
+      <div class="container">
+        <div class="card view">
+          <div class="card-body">
+            <h5 class="card-title addressDetails">Address Details</h5>
+            <a href="../Address-Book/" class="card-link changeAddress"
+              >Change Address Details</a
+            >
+
+            <p id="name" class="card-text name" style="color: #000137">
+              <!-- User's Name -->
+            </p>
+            <p id="hostel" class="card-text hostel">
+              <!-- User's Hostel -->
+            </p>
+            <p id="phone" class="card-text phone">
+              <!-- User's Phone Number -->
+            </p>
+
+            <hr />
+
+            <div class="row flex">
+              <div class="col subtotal">Subtotal</div>
+              <div id="subtotal" class="col subtotalValue">
+                <!-- Dynamic subtotal value -->
+              </div>
+            </div>
+
+            <div class="row flex">
+              <div class="col shipping">Shipping</div>
+              <div class="col shippingValue">₦100</div>
+            </div>
+
+            <div class="row flex">
+              <div class="col total">Total</div>
+              <div id="total" class="col totalValue">
+                <!-- Dynamic total value -->
+              </div>
+            </div>
+
+            <hr />
+
+            <form id="paymentForm" class="paymentForm">
+              <button
+                id="paystack_payment"
+                type="submit"
+                class="btn btn-primary"
+              >
+                Continue Payment
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="loader"></div>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

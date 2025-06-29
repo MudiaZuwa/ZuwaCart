@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <title>Categories</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#000137" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="body">
+      <div
+        style="
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        "
+      >
+        <div class="category_select" id="category_select1">
+          <div class="category_view" id="category_view1">
+            <i class="bx bx-headphone category_image"></i>
+          </div>
+        </div>
+        <div class="category_select" id="category_select2">
+          <div class="category_view" id="category_view2">
+            <i class="bx bxs-t-shirt category_image"></i>
+          </div>
+        </div>
+        <div class="category_select" id="category_select3">
+          <div class="category_view" id="category_view3">
+            <i class="bx bxs-spray-can category_image"></i>
+          </div>
+        </div>
+        <div class="category_select" id="category_select4">
+          <div class="category_view" id="category_view4">
+            <i class="fa-solid fa-boot"></i>
+            <img src="../images/shoe.png" alt="" class="category_image" />
+          </div>
+        </div>
+        <div class="category_select" id="category_select5">
+          <div class="category_view" id="category_view5">
+            <i class="bx bxs-bowl-rice category_image"></i>
+          </div>
+        </div>
+      </div>
+      <div id="display" class="container h-100">
+        <div class="row" id="category_body">
+          <div id="loader"></div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="../" class="nav__link">
+        <span class="nav__text material-icons">home</span>
+      </a>
+      <a href="../Category/" class="nav__link nav__link--active">
+        <span class="nav__text material-icons">apps</span>
+      </a>
+      <a href="../Settings/" class="nav__link">
+        <span class="nav__text material-icons">settings</span>
+      </a>
+    </nav>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

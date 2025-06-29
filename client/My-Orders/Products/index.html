@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">My Orders</title>
+    <link rel="icon" href="/images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2">
+        <span>Ordered Items</span>
+      </div>
+    </div>
+    <div id="body">
+      <div class="container">
+        <div class="row" id="products"></div>
+      </div>
+
+      <div id="info">
+        <div style="display: flex; background-color: white; padding: 8px">
+          <p style="font-size: 16px; width: 50%; margin: 0px">Total</p>
+          <p
+            id="total"
+            style="
+              font-size: 16px;
+              color: #000137;
+              width: 50%;
+              text-align: right;
+              margin: 0px;
+            "
+          >
+            N100000
+          </p>
+        </div>
+        <div style="display: flex; background-color: white; padding: 8px">
+          <p style="font-size: 16px; width: 50%">Status</p>
+          <p
+            id="status"
+            style="
+              font-size: 16px;
+              color: #000137;
+              width: 50%;
+              text-align: right;
+            "
+          >
+            N100000
+          </p>
+        </div>
+      </div>
+      <div id="no_items">
+        <div style="width: 236px; height: 220px; margin: auto">
+          <p style="font-size: 18px; text-align: center">
+            Vendor have Deleted the Products
+          </p>
+          <img
+            src="/images/PngItem_212128 (2).png"
+            style="
+              height: 120px;
+              width: 150px;
+              filter: invert(6%) sepia(63%) saturate(3693%) hue-rotate(232deg)
+                brightness(91%) contrast(117%);
+              margin-bottom: 8px;
+              object-fit: scale-down;
+              margin-left: 43px;
+            "
+          />
+          <a href="../" class="continue"
+            ><button id="continue">Previous Orders</button></a
+          >
+        </div>
+      </div>
+      <div id="rec">
+        <div
+          style="
+            margin-top: 8px;
+            width: 100%;
+            background-color: white;
+            padding: 8px;
+          "
+        >
+          <div style="color: #000137; font-size: 14px; padding: 8px">
+            Recently Viewed items
+          </div>
+        </div>
+        <div
+          id="recent"
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <div id="loader"></div>
+    <script src="/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

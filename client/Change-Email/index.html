@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Change Email</title>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2">
+        <span> Change Email</span>
+      </div>
+    </div>
+
+    <div
+      id="form"
+      class="container shadow-lg rounded-3 bg-white py-2"
+      style="max-width: 400px; margin-top: 70px"
+    >
+      <form id="boxes">
+        <input
+          required
+          type="email"
+          class="form-control my-3"
+          placeholder="Email Address"
+          id="email"
+        />
+
+        <div class="input-group mb-3">
+          <input
+            required
+            type="password"
+            class="form-control"
+            placeholder="Password"
+            id="password"
+          />
+          <button class="btn btn-outline-secondary" type="button" id="toggle">
+            <img
+              src="../images/ic_visibility_off_black.png"
+              id="toggleImg"
+              alt="Toggle Visibility"
+              style="width: 20px; height: 20px"
+            />
+          </button>
+        </div>
+
+        <input
+          required
+          type="email"
+          class="form-control my-3"
+          placeholder="New Email Address"
+          id="newEmail"
+        />
+        <button
+          id="submit"
+          type="submit"
+          class="btn btn-primary w-100 mt-3 shadow-sm"
+          style="background-color: #000137; border: none"
+        >
+          Done
+        </button>
+
+        <div
+          id="loader"
+          class="spinner-border text-primary d-none mt-3"
+          role="status"
+          style="width: 28px; height: 28px; border-width: 5px"
+        ></div>
+      </form>
+    </div>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

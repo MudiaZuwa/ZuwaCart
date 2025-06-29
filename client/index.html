@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="google-site-verification"
+      content="tmBNvQn8Ro_nv_H4Dt9d5JM5DgXnapuLLN6fr2lUYAI"
+    />
+    <link rel="icon" href="images/cart.png" sizes="16×16" />
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000137" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title">ZuwaCart</title>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav id="div1" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid flex-nowrap">
+        <div>
+          <div class="navbar-nav flex-row">
+            <a class="nav-link px-md-2 px-1" href="#">
+              <span class="d-none d-md-block">Home</span>
+              <img class="d-md-none" src="images/home-icon.png" />
+            </a>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <form class="d-flex vw-md-25" id="form">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search..."
+              id="div2"
+              list="history"
+            />
+            <datalist id="history"></datalist>
+          </form>
+          <a class="nav-link px-md-2 px-1" href="./My-Cart/">
+            <div class="notification">
+              <span class="d-none d-md-block">Cart</span>
+              <span class="material-symbols-outlined d-md-none">
+                shopping_cart
+              </span>
+              <span id="cart_num2" class="a_badge">0</span>
+            </div>
+          </a>
+
+          <!-- <a class="nav-link px-md-2 px-1" href="./Liked-Items/">
+            <span class="d-none d-md-block">Liked Items</span>
+            <span class="material-symbols-outlined d-md-none"> favorite </span>
+          </a> -->
+
+          <a class="nav-link px-md-2 px-1" href="./My-Orders/">
+            <span class="d-none d-md-block">Your Orders</span>
+            <span class="material-symbols-outlined d-md-none"> orders </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" id="main__menu">
+      <div
+        class="row d-flex align-items-center justify-content-start w-auto"
+        id="items_body"
+      ></div>
+    </div>
+
+    <div id="loader"></div>
+    <nav class="nav">
+      <a href="./" class="nav__link nav__link--active">
+        <span class="nav__text material-icons">home</span>
+      </a>
+      <a href="./Category/" class="nav__link">
+        <span class="nav__text material-icons">apps</span>
+      </a>
+      <a href="./Settings/" class="nav__link">
+        <span class="nav__text material-icons">settings</span>
+      </a>
+    </nav>
+
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>

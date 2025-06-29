@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2" >
+        <span >Reset Password</span>
+      </div>
+    </div>
+    <form id="boxes" class="container p-4 shadow-lg rounded bg-white">
+      <input
+        required
+        type="email"
+        class="form-control mb-3 boxes"
+        placeholder="Email Address"
+        id="email"
+      />
+
+      <button id="submit" type="submit" class="btn btn-primary w-100 shadow-sm">
+        Send Reset Email
+      </button>
+
+      <div
+        id="loader"
+        class="spinner-border text-primary d-none mt-3"
+        role="status"
+      ></div>
+    </form>
+
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

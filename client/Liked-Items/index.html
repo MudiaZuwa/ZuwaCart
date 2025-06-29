@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+    <title>Liked Items</title>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2">
+        <span>Liked Items</span>
+      </div>
+    </div>
+    <div id="page_body">
+      <div class="container">
+        <div class="row" id="item_list"></div>
+      </div>
+      <div id="no_items">
+        <div style="width: 236px; height: 220px; margin: auto">
+          <p style="font-size: 18px; width: fit-content; margin: auto">
+            You have no saved item
+          </p>
+          <img
+            src="../images/PngItem_212128 (2).png"
+            style="
+              height: 120px;
+              width: 150px;
+              filter: invert(6%) sepia(63%) saturate(3693%) hue-rotate(232deg)
+                brightness(91%) contrast(117%);
+              margin-bottom: 8px;
+              object-fit: scale-down;
+              margin-left: 43px;
+            "
+          />
+          <a href="../" class="continue"
+            ><button id="continue">Continue Shopping</button></a
+          >
+        </div>
+      </div>
+
+      <div id="rec">
+        <div
+          style="
+            margin-top: 8px;
+            width: 100%;
+            background-color: white;
+            padding: 8px;
+          "
+        >
+          <div style="color: #000137; font-size: 14px; padding: 8px">
+            Recently Viewed items
+          </div>
+        </div>
+        <div
+          id="recent"
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+          "
+        ></div>
+      </div>
+    </div>
+
+    <div id="loader"></div>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

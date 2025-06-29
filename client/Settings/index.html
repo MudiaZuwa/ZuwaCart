@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <meta name="theme-color" content="#000137" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <div id="body">
+      <header>
+        <div id="div1">
+          Account
+          <div class="div2"></div>
+          <a href="../My-Cart/" class="notification">
+            <img src="../images/PngItem_212128 (2).png" id="cart" />
+            <span class="badge" id="cart_num">0</span>
+          </a>
+        </div>
+        <div id="div3" class="div3">
+          <div style="width: 100%">
+            <div class="div3">
+              <p style="margin-right: 3px">Welcome</p>
+              <p id="username"></p>
+            </div>
+            <p id="loginrequest">Please Login to your Account</p>
+          </div>
+          <button id="login">Login</button>
+        </div>
+      </header>
+
+      <div class="view">
+        <div class="option" style="padding: 16px 16px 16px 28px">
+          <a href="../My-Shop/"> My Shop </a>
+        </div>
+        <div class="option" style="padding: 16px 16px 16px 28px">
+          <a href="../Liked-Items/"> Liked Items </a>
+        </div>
+        <div class="option" style="padding: 16px 16px 16px 28px">
+          <a href="../My-Orders/"> My Orders </a>
+        </div>
+        <div class="option" style="padding: 16px 16px 16px 28px">
+          <a href="../Address-Book/"> Address Book </a>
+        </div>
+      </div>
+      <div class="view">
+        <div class="option" style="padding: 16px 16px 16px 28px">
+          <span id="displayMode"> Color Theme </span>
+        </div>
+
+        <!-- Theme Selection Modal -->
+        <div id="themeModal" class="theme-modal">
+          <button
+            id="close"
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+          ></button>
+          <div class="theme-modal-content">
+            <h5 class="modal-title">Theme</h5>
+
+            <div class="theme-options" id="themeOptions">
+              <label>
+                <input type="radio" name="theme" value="dark" checked />
+                Dark (default)
+              </label>
+              <label>
+                <input type="radio" name="theme" value="light" />
+                Light
+              </label>
+              <label>
+                <input type="radio" name="theme" value="system" />
+                System
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="option" style="padding: 16px 16px 16px 28px">
+          <a href="../Change-Email/"> Change Email </a>
+        </div>
+        <div class="option" style="padding: 16px 16px 16px 28px">
+          <a href="../Change-Password/"> Change Password </a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="../" class="nav__link">
+        <span class="nav__text material-icons">home</span>
+      </a>
+      <a href="../Category/" class="nav__link">
+        <span class="nav__text material-icons">apps</span>
+      </a>
+      <a href="../Settings/" class="nav__link nav__link--active">
+        <span class="nav__text material-icons">settings</span>
+      </a>
+    </nav>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

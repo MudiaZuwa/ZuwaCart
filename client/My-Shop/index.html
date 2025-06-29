@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Shop</title>
+    <link rel="icon" href="../images/cart.png" sizes="16×16" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <meta name="theme-color" content="#000137" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="main.js"></script>
+    <script type="module" src="order.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <div id="div1">
+      <div id="option"></div>
+      <div class="div2">
+        <span>My Shop</span>
+      </div>
+    </div>
+    <div id="item_body">
+      <div class="vendor-info">
+        <img src="" id="business-icon" />
+        <div class="d-flex flex-column">
+          <div id="vendor-name"></div>
+          <div id="vendor-address"></div>
+          <div id="vendor-phone"></div>
+          <div id="vendor-categories"></div>
+        </div>
+        <div class="d-flex justify-content-end align-items-center" id="editConatainer">
+          <span class="material-symbols-outlined" id="vendor-edit"> edit </span>
+        </div>
+      </div>
+
+      <div class="options">
+        <div class="option_select" id="option_select1">
+          <div class="option_view" id="option_view1">
+            <p class="optionText">Uploaded Item</p>
+          </div>
+        </div>
+        <div class="option_select" id="option_select2">
+          <div class="option_view" id="option_view2">
+            <p class="optionText">Requested Orders</p>
+          </div>
+        </div>
+      </div>
+      <div class="optionContainer">
+        <div class="dataBody">
+          <div class="optionbody visible" id="itemList">
+            <div class="row" id="items"></div>
+            <div>
+              <p class="material-icons" id="floating-btn">add</p>
+              <div id="no_items">
+                <div style="width: 236px; height: 220px; margin: auto">
+                  <p style="font-size: 18px">You have no Items Registered</p>
+                  <img src="../images/PngItem_212128 (2).png" /><button
+                    id="continue"
+                  >
+                    Upload Items
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="orderList" class="optionbody"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="upload-item"
+      class="floating-body justify-content-center align-items-center"
+    >
+      <form
+        id="upload-form"
+        class="floating-form p-4 shadow-lg bg-white rounded-3"
+      >
+        <div class="text-end">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <h4 class="text-center mb-3">Upload Product</h4>
+
+        <div
+          class="drop-area border border-secondary text-center p-3 mb-3 rounded"
+        >
+          <span class="drop-instruction d-block mb-2">
+            Drag and drop Product Images here or click to select
+          </span>
+          <input type="file" class="file-input d-none" multiple />
+          <button type="button" class="btn btn-sm fileButton">
+            Select File
+          </button>
+          <ul class="file-list list-unstyled"></ul>
+        </div>
+        <input
+          required
+          type="text"
+          class="form-control mb-3"
+          placeholder="Product Name"
+          id="name"
+        />
+        <div class="input-group mb-3">
+          <span class="input-group-text">₦</span>
+          <input
+            required
+            type="text"
+            class="form-control"
+            placeholder="Product Price"
+            id="price"
+          />
+        </div>
+
+        <select required class="form-select mb-3" id="pickup-time">
+          <option value="Time" disabled selected>
+            Product Estimated PickUp Time (in days)
+          </option>
+          <option value="1">1 day</option>
+          <option value="2">2 days</option>
+          <option value="3">3 days</option>
+          <option value="4">4 days</option>
+          <option value="5">5 days</option>
+        </select>
+
+        <input
+          required
+          type="number"
+          class="form-control mb-3"
+          placeholder="Product Quantity Available"
+          id="quantity"
+          min="1"
+        />
+
+        <textarea
+          required
+          class="form-control mb-3"
+          id="description"
+          placeholder="Product Description"
+          rows="4"
+        ></textarea>
+
+        <select required class="form-select mb-3" id="category">
+          <option value="" disabled selected>Select Category</option>
+          <option value="Shoes">Shoes</option>
+          <option value="Phone Accessories">Phone Accessories</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Food & Catering">Food & Catering</option>
+          <option value="Perfume & Oil">Perfume & Oil</option>
+        </select>
+
+        <div
+          id="uploadLoader"
+          class="spinner-border text-primary d-none mx-auto"
+          role="status"
+        ></div>
+
+        <button
+          type="submit"
+          class="btn w-100 mt-3 shadow-sm text-light"
+          style="background-color: #000137"
+        >
+          Upload Item
+        </button>
+      </form>
+    </div>
+
+    <div
+      id="register"
+      class="floating-body align-items-center justify-content-center"
+    >
+      <form
+        id="register-form"
+        class="floating-form p-4 shadow-lg rounded-3 bg-light"
+      >
+        <div class="text-end">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <h4 class="text-center mb-3">Register New Vendor</h4>
+
+        <div
+          class="drop-area border border-secondary rounded p-4 text-center mb-3"
+        >
+          <span class="drop-instruction d-block mb-2"
+            >Drag and drop Business Icon here or click to select
+            (Optional)</span
+          >
+          <input type="file" class="file-input d-none" multiple />
+          <button type="button" class="btn btn-sm fileButton">
+            Select File
+          </button>
+          <ul
+            class="file-list mt-2 list-unstyled overflow-auto"
+            style="max-height: 60px"
+          ></ul>
+        </div>
+
+        <input
+          type="text"
+          id="business-name"
+          class="form-control mb-3"
+          placeholder="Business Name (Optional)"
+        />
+        <input
+          type="text"
+          id="phone"
+          class="form-control mb-3"
+          placeholder="Additional Phone Number (Optional)"
+        />
+        <input
+          type="text"
+          id="business-address"
+          class="form-control mb-3"
+          placeholder="Business Address (Optional)"
+        />
+
+        <div class="mb-2">Select Business Categories:</div>
+        <div class="categories d-flex flex-wrap gap-2 mb-3">
+          <span class="badge p-2 category">Shoes</span>
+          <span class="badge p-2 category">Phone Accessories</span>
+          <span class="badge p-2 category">Clothing</span>
+          <span class="badge p-2 category">Food & Catering</span>
+          <span class="badge p-2 category">Perfume & Oil</span>
+        </div>
+
+        <button
+          type="submit"
+          class="btn w-100 text-light"
+          style="background-color: #000137"
+        >
+          Register
+        </button>
+        <div
+          id="registerLoader"
+          class="spinner-border text-light d-none mt-3"
+          role="status"
+        ></div>
+      </form>
+    </div>
+    <div id="loader"></div>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+:root {
+  --main-color: #000137;
+  --main-hover-color: #282f5f;
+  --sub-color: white;
+  --main-image-filter: invert(6%) sepia(63%) saturate(3693%) hue-rotate(232deg)
+    brightness(91%) contrast(117%);
+  --sub-image-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg)
+    brightness(104%) contrast(101%);
+}
+
+body {
+  padding-top: 0px;
+  margin-top: -1px;
+  margin-bottom: 55px;
+  margin-left: -1px;
+  background-color: #eeeeee;
+  width: 100%;
+  height: 100%;
+  margin-right: -1px;
+  visibility: hidden;
+}
+
+p {
+  cursor: default;
+  padding: 0px;
+}
+#option {
+  width: 40px;
+  height: 40px;
+  object-fit: scale-down;
+  margin: 10px 5px 10px 10px;
+}
+.div2 {
+  width: 100%;
+  font-size: 25px;
+  padding: 0px;
+}
+
+.div2 span {
+  color: var(--sub-color);
+  vertical-align: middle;
+}
+
+#div1 {
+  background-color: var(--main-color);
+  width: 100%;
+  display: flex;
+  vertical-align: middle;
+  padding: 0px;
+}
+
+.completeOrder {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addressDetails {
+  padding: 8px;
+  font-size: 14px;
+  color: #9e9e9e;
+}
+
+.view .changeAddress {
+  padding: 0 8px 8px 8px;
+  text-decoration: none;
+  color: #000137;
+}
+
+.name {
+  padding: 0 8px 8px 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hostel,
+.phone {
+  padding: 0 8px 8px 8px;
+  font-size: 14px;
+  color: #9e9e9e;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+}
+
+.subtotal,
+.shipping,
+.total {
+  padding: 0 8px 8px 8px;
+  width: 50%;
+  font-size: 16px;
+}
+
+.subtotalValue,
+.shippingValue {
+  padding: 0 8px 8px 8px;
+  font-size: 16px;
+  width: 50%;
+  text-align: right;
+}
+
+.totalValue {
+  padding: 0 8px 8px 8px;
+  font-size: 16px;
+  color: #000137;
+  width: 50%;
+  text-align: right;
+}
+
+.paymentForm {
+  width: 100%;
+  padding: auto;
+  display: flex;
+  justify-content: end;
+}
+
+#paystack_payment {
+  background-color: #000137;
+  border-color: #000137;
+}
+#loader {
+  border: 9px solid #f3f3f3;
+  border-top: 9px solid #000137;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite alternate;
+  display: block;
+  position: fixed;
+  bottom: 40%;
+  left: 45%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
