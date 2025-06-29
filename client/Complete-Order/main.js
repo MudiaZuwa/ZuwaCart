@@ -292,7 +292,7 @@ function payWithPaystack(e) {
     callback: function (response) {
       console.log("✅ Payment complete. Verifying...");
 
-      fetch("http://localhost:3001/verify-payment", {
+      fetch("https://quickxmarket-server.vercel.app/api/mail/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ reference: response.reference }),
